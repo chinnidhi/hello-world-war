@@ -10,9 +10,9 @@
 
 <distributionManagement>
     <repository>
-        <id>hello-world-war</id>
-        <name>hello-world-war-libs-release</name>
-        <url>https://trial40vdw8.jfrog.io/artifactory/hello-world-war-libs-release</url>
+        <id>hello-world-war-new</id>
+        <name>hello-world-war-new-libs-release</name>
+        <url>http://18.208.223.75:8081/artifactory/hello-world-war-new-libs-release</url>
     </repository>
 </distributionManagement>
 	<build>
