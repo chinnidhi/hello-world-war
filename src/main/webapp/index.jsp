@@ -1,13 +1,17 @@
 <html>
-<head>
-<title>Hello World!</title>
-</head>
 <body>
-	<h1>Hello Sample World!</h1>
-	<p>
-		It is now
-		<%= new java.util.Date() %></p>
-	<p>
-		You are coming from 
-		<%= request.getRemoteAddr()  %></p>
+<%!
+   long n = 10, result;
+   long fact(long n) {
+      if(n==0)        
+         return 1;   
+      else
+         return n*fact(n-1);
+   }
+%>
+<%    
+    result = fact(n);
+%>
+<b>Factorial value: </b> <%= result %>
 </body>
+</html>
