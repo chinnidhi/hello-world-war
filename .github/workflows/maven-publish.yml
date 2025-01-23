@@ -26,9 +26,9 @@ jobs:
           echo "<settings>
                   <servers>
                     <server>
-                      <id>hello-world-war</id>
-                      <username>chinnidhi22@gmail.com</username>
-                      <password>cmVmdGtuOjAxOjE3NjkwOTMwNjU6MU5tNURHSm9xdXppb1JETVhYbGZScUYxWWt1</password>
+                      <id>hello-world-war-new</id>
+                      <username>admin</username>
+                      <password>cmVmdGtuOjAxOjE3NjkxNzE0MjQ6c09VcEZ1VjJkZmR1b0JBMEJyQ2JNYm5KdmVG</password>
                     </server>
                   </servers>
                 </settings>" > ~/.m2/settings.xml        
