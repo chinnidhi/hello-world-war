@@ -43,5 +43,5 @@ jobs:
     # Step 6: Wait for the Quality Gate to be successful
     - name: Check Quality Gate status
       uses: sonarsource/sonarcloud-github-action@v1
-      with:
-        token: ${{ secrets.SONAR_TOKEN }}  # Use the token from GitHub Secrets
+      env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
