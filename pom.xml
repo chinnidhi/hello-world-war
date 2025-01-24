@@ -40,17 +40,21 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.7</version>
 				<executions>
-				    <execution>
-					<goals>
-					    <goal>prepare-agent</goal> <!-- Prepare agent for code coverage -->
-					</goals>
-				    </execution>
-				    <execution>
-					<goals>
-					    <goal>report</goal> <!-- Generate code coverage report -->
-					</goals>
-				    </execution>
-				</executions>
+					<execution>
+					  <id>default-prepare-agent</id>  <!-- Unique execution ID -->
+					  <phase>prepare-package</phase>
+					  <goals>
+					    <goal>prepare-agent</goal>
+					  </goals>
+					</execution>
+					<execution>
+					  <id>default-report</id>  <!-- Unique execution ID -->
+					  <phase>verify</phase>
+					  <goals>
+					    <goal>report</goal>
+					  </goals>
+					</execution>
+			      </executions>
 		    	</plugin>
 		</plugins>
 	</build>
