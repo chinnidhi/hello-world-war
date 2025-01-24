@@ -1,5 +1,6 @@
 <html>
 <body>
+<h1>Hello</h1>
 <%!
    long n = 10, result;
    long fact(long n) {
