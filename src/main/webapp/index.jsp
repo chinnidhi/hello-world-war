@@ -22,5 +22,18 @@
     String query = "SELECT * FROM users WHERE name='" + userInput + "'";
     out.println(query);
 %>
+<%@ page import="java.util.*" %>
+<%
+    String userInput = request.getParameter("userInput");
+    // SQL Injection vulnerability: no sanitization of user input
+    String query = "SELECT * FROM users WHERE name='" + userInput + "'";
+    out.println(query);
+%>
+<%
+    String userInput = request.getParameter("userInput");
+    // SQL Injection vulnerability: no sanitization of user input
+    String query = "SELECT * FROM users WHERE name='" + userInput + "'";
+    out.println(query);
+%>
 </body>
 </html>
