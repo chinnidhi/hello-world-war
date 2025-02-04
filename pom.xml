@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.efsavage</groupId>
 	<artifactId>hello-world-war</artifactId>
-	<version>${GITHUB_RUN_NUMBER}</version>
+	<version>${env.BUILD_NUMBER}</version>
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
@@ -12,7 +12,7 @@
     <repository>
         <id>hello-world-war</id>
         <name>ip-172-31-36-63-releases</name>
-        <url>ttp://52.66.9.98:8081/artifactory/hello-world-war-libs-release</url>
+        <url>http://52.66.9.98:8081/artifactory/hello-world-war-libs-release</url>
     </repository>
 </distributionManagement>
 	<build>
