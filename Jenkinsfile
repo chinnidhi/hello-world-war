@@ -4,8 +4,8 @@ pipeline{
         ARTIFACTORY_CREDENTIALS = credentials('JFROG_PASSWORD')
     }
   stages{
-    agent {label 'build'}
     stage('checkout'){
+      agent {label 'build'}
       steps{
         sh 'pwd'
       }
@@ -35,7 +35,7 @@ pipeline{
           sh 'mvn clean deploy'
         }
     }
-    stage('deploy')
+    stage('deploy'){
     agent { label 'build' }
     steps{
       sh 'curl -L -u "${ARTIFACTORY_CREDENTIALS_USR}:${ARTIFACTORY_CREDENTIALS_PSW}" -O "http://52.66.9.98:8082/artifactory/hello-world-war-libs-release/com/efsavage/hello-world-war/${BUILD_NUMBER}/hello-world-war-${BUILD_NUMBER}.war"'
@@ -44,4 +44,5 @@ pipeline{
      sh 'sudo bash /opt/tomcat/apache-tomcat-10.1.34/bin/startup.sh'
     }
   }
+}
 }
