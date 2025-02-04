@@ -4,10 +4,16 @@ pipeline{
         ARTIFACTORY_CREDENTIALS = credentials('JFROG_PASSWORD')
     }
   stages{
+    stage('Heading'){
+      steps{
+      echo 'This job will automate the CICD'
+      }
+    }
     stage('checkout'){
       agent {label 'build'}
       steps{
         sh 'pwd'
+        sh 'mvn --version'
       }
     }
     stage('build'){
@@ -45,4 +51,9 @@ pipeline{
     }
   }
 }
+  post{
+    failure{
+      echo 'The build has failed'
+    }
+  }
 }
