@@ -6,7 +6,7 @@ pipeline{
         sh 'echo"Hi This job builds and deploys your java project"'
       }
     }
-    stage('checkout){
+    stage('checkout'){
       steps{
         sh 'pwd'
       }
