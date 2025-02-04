@@ -6,10 +6,14 @@ pipeline{
         sh 'pwd'
       }
     }
-          stage('build'){
-            steps{
-            sh 'mvn clean package'
-          }
-        }
+    stage('build'){
+        steps{
+        sh 'mvn clean package'
+      }
+    }
+    stage('publish')
+    {
+      
+    }
   }
 }
