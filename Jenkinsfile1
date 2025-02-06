@@ -13,28 +13,28 @@ pipeline{
     }
     stage('checkout'){
       steps{
-    agent { label 'build' }
-      checkoutFile()
+        agent { label 'build' }
+        checkoutFile()
       }
     }
     stage('Build') {
       steps{
         agent { label 'build' }
-       buildFile()
+        buildFile()
       }
     }
 stage('Publish') {
 steps {
         agent { label 'build' }
-      publishFile()
+        publishFile()
     }
   }
 stage('deploy') {
 steps{
-agent { label 'build' }
+    agent { label 'build' }
     deployFile(env.BUILD_NUMBER,'13.126.3.38')
-}
-}
+    }
+  }
 }
   post{
     failure{
