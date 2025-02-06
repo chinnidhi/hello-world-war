@@ -20,6 +20,16 @@ pipeline{
        buildFile()
       }
     }
+stage('Publish') {
+steps {
+      publishFile()
+    }
+  }
+stage('deploy') {
+steps{
+
+}
+}
 }
   post{
     failure{
