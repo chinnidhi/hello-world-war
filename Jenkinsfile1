@@ -13,6 +13,7 @@ pipeline{
     }
     stage('checkout'){
       steps{
+    agent { label 'build' }
       checkoutFile()
       }
     }
@@ -30,6 +31,7 @@ steps {
   }
 stage('deploy') {
 steps{
+agent { label 'build' }
     deployFile(env.BUILD_NUMBER,'13.126.3.38')
 }
 }
