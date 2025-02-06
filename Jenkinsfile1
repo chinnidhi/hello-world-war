@@ -27,7 +27,7 @@ steps {
   }
 stage('deploy') {
 steps{
-
+    deployFile(env.BUILD_NUMBER,'ip_address')
 }
 }
 }
