@@ -24,13 +24,13 @@ pipeline{
       }
     }
 stage('Publish') {
-agent { label 'build' }
+agent { label 'deploy' }
 steps {
         publishFile()
     }
   }
 stage('deploy') {
-    agent { label 'deploy' }
+    agent { label 'build' }
 steps{
     deployFile(env.BUILD_NUMBER,'13.126.3.38')
     }
