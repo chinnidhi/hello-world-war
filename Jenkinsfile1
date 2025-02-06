@@ -30,7 +30,7 @@ steps {
     }
   }
 stage('deploy') {
-    agent { label 'deploy' }
+    agent { label 'build' }
 steps{
     deployFile(env.BUILD_NUMBER,'13.126.3.38')
     }
