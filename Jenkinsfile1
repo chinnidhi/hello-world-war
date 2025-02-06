@@ -24,7 +24,7 @@ pipeline{
       }
     }
 stage('Publish') {
-agent { label 'deploy' }
+agent { label 'build' }
 steps {
         publishFile()
     }
